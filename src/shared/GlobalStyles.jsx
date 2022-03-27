@@ -1,14 +1,16 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const variables = {
 	colors: {
-		primary: '#735DFF',
+		primary: '#963aff',
 		secondary: '#3461FF',
 		bg_default: '#060606',
+		gray: '#bebebe',
 		font_default: '#fff',
 	},
 	font: {
-		size: '24px',
+		size: '16px',
 	},
 	mediaQueries: {
 		mobile_l: '425px',
@@ -19,6 +21,11 @@ export const variables = {
 		short: 'ease-in-out .5s',
 	},
 };
+
+export const StyledLink = styled(Link)`
+	all: unset;
+	cursor: pointer;
+`;
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -34,47 +41,30 @@ export const GlobalStyles = createGlobalStyle`
     }
     img {
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
     a{
         text-decoration: none;
         color: unset;
     }
+    p {
+        color: ${variables.font.gray};
+    }
 
+    .gold {
+        color:  #D5AD6D; /*if no support for background-clip*/ 
+        background: -webkit-linear-gradient(transparent, transparent),
+                    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+        background: -o-linear-gradient(transparent, transparent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+   }
     .section {
         padding:  5rem 3rem;
     }
     .title {
-        font-size: clamp(1rem, 10vw, 6rem); 
+        font-size: 4rem; 
         font-weight: 900;
     }
-    .gold-txt {
-        font-weight: 600;
-        background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #fff;
-        position: relative;
-        text-transform: uppercase;	
-        font-weight: 400;
-        &:after {
-        background: none;
-        content: attr(data-heading);
-        left: 0;
-        top: 0;
-        z-index: -1;
-        position: absolute;
-        text-shadow: 
-            -1px 0 1px #c6bb9f, 
-            0 1px 1px #c6bb9f, 
-            5px 5px 10px rgba(0, 0, 0, 0.4),
-            -5px -5px 10px rgba(0, 0, 0, 0.4);
-}
-    }
-    @media only screen and (max-width: ${variables.mediaQueries.mobile_l}) {
-        body {
-            text-align: center;
-        }
-
-    }
+  
 `;
