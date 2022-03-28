@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { StyledLink, variables } from '../../shared/GlobalStyles';
 
 export const HomePage = () => {
-
-
 	return (
 		<Container>
 			<StyledLink to='overview'>
@@ -24,55 +22,55 @@ const SpinnerBlock = styled.div`
 const SpinnerTitle = styled.span`
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 51%;
 	transform: translate(-50%, -50%);
-	text-align: center;
 	font-weight: 600;
-	font-size: 2.3rem;
+	font-size: 2.2rem;
 `;
 const Spinner = styled.div`
 	position: relative;
-	width: 200px; // Variable
-	height: 200px; // Variable
+	width: 10rem; // Variable
+	height: 10rem; // Variable
 	&:before,
 	&:after {
 		content: '';
 		display: block;
 		position: absolute;
-		border-width: 4px;
+		border-width: 1px;
 		border-style: solid;
 		border-radius: 50%;
+		border-color: ${variables.colors.gray};
+	
 	}
 	@keyframes scale-2 {
 		0% {
-			transform: scale(0);
+			transform: scale(1);
 			opacity: 0;
 		}
 
 		50% {
-			transform: scale(0.7);
+			transform: scale(1.1);
 			opacity: 1;
 		}
 
 		100% {
-			transform: scale(1);
+			transform: scale(1.3);
 			opacity: 0;
 		}
 	}
 
 	&:before {
-		width: 200px;
-		height: 200px;
-		border-color: red solid 1px;
+		width: 10rem; // Variable
+		height: 10rem; // Variable
+	
 		top: 0px;
 		left: 0px;
 		animation: scale-2 2s linear 0s infinite;
 	}
 
 	&:after {
-		width: 200px;
-		height: 200px;
-		border-color: red solid 1px;
+		width: 10rem; // Variable
+		height: 10rem; // Variable
 		top: 0;
 		left: 0;
 		opacity: 0;
@@ -91,4 +89,3 @@ const Container = styled.main`
 		width: 1rem;
 	}
 `;
-
