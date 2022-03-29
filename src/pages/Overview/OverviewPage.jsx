@@ -1,9 +1,11 @@
-import { Header } from "./sections/Header";
+import { Header } from './Sections/Header';
+import { OverviewDescription } from './Sections/OverviewDescription';
 
 export const OverviewPage = () => {
 	return (
-		<Header/>
+		<main>
+			<Header />
+			<OverviewDescription />
+		</main>
 	);
 };
-
-

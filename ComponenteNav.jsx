@@ -6,14 +6,11 @@ import { motion } from 'framer-motion';
 import { StyledLink, variables } from './GlobalStyles';
 import logo from './assets/img/logo.png';
 import { useEffect } from 'react';
-import { useWindowWidth } from '../hooks/useWindowWidth';
 
-export const Navigation = () => {
+const Navigation = () => {
 	const location = useLocation();
 	const [showNav, setShowNav] = useState(false);
 	const [hideNav, setHideNav] = useState(location.pathname === '/');
-
-	console.log(useWindowWidth(variables.mediaQueries.tablet_number));
 
 	useEffect(() => {
 		// Every time the location changes the hideNav state it's update
@@ -30,17 +27,15 @@ export const Navigation = () => {
 			}}
 			animate={{
 				height: showNav ? '350px' : '60px',
+				backgroundColor: showNav ? variables.colors.bg_default : 'transparent',
 			}}
-			style={{
-				// If window is less tha 300px
-				backgroundColor: useWindowWidth(variables.mediaQueries.tablet_number) && (showNav ? variables.colors.bg_default : 'transparent')	
-			}}
-			initial={{ height: '60px' }}
+			initial={{ height: '60px', backgroundColor: 'transparent' }}
 		>
 			<Hamburger
 				onClick={() => setShowNav(prevState => !prevState)}
 				className='Hamburger'
 			>
+				<Bar show={showNav} />
 				<Bar show={showNav} />
 				<Bar show={showNav} />
 			</Hamburger>
@@ -93,10 +88,13 @@ const Container = styled(motion.header)`
 	width: 90%;
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
 		align-items: flex-start;
+		/* background-color: ${variables.colors.bg_default}; */
 		overflow: hidden;
 		.Hamburger {
-			display: block;
-			position: absolute;
+			@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
+				display: block;
+				position: absolute;
+			}
 		}
 		.Logo {
 			position: absolute; // This may no work properly
@@ -138,8 +136,8 @@ const Hamburger = styled.div`
 `;
 const Bar = styled.span`
 	display: block;
-	width: 20px;
-	height: 2px;
+	width: 25px;
+	height: 3px;
 	margin: 5px auto;
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
@@ -148,11 +146,14 @@ const Bar = styled.span`
 	${props =>
 		props.show &&
 		css`
-			&:nth-child(1) {
-				transform: translateY(7px) rotate(45deg);
-			}
 			&:nth-child(2) {
-				transform: rotate(-45deg);
+				opacity: 0;
+			}
+			&:nth-child(1) {
+				transform: translateY(8px) rotate(45deg);
+			}
+			&:nth-child(3) {
+				transform: translateY(-8px) rotate(-45deg);
 			}
 		`}
 `;

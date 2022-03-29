@@ -39,8 +39,7 @@ const Spinner = styled.div`
 		border-width: 1px;
 		border-style: solid;
 		border-radius: 50%;
-		border-color: ${variables.colors.gray};
-	
+		border-color: ${variables.colors.dark_gray};
 	}
 	@keyframes scale-2 {
 		0% {
@@ -62,7 +61,7 @@ const Spinner = styled.div`
 	&:before {
 		width: 10rem; // Variable
 		height: 10rem; // Variable
-	
+
 		top: 0px;
 		left: 0px;
 		animation: scale-2 2s linear 0s infinite;
@@ -84,7 +83,7 @@ const Container = styled.main`
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	height: 90vh;
+	height: 80vh;
 	img {
 		width: 1rem;
 	}
