@@ -19,16 +19,12 @@ export const Footer = () => {
 
 const Container = styled.footer`
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 0.8rem;
-	padding: 2rem 0;
-	position: relative;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
+	padding: 1rem;
+	font-size: 0.6rem;
 	img {
 		width: 1rem;
 	}
@@ -38,7 +34,6 @@ const Copyright = styled.footer`
 	display: flex;
 
 	align-items: center;
-	font-size: clamp(0.6rem, 1.5vw, .8rem);
 	@media only screen and (max-width: 300px) {
 		flex-wrap: wrap;
 	}

@@ -13,7 +13,22 @@ export const Navigation = () => {
 	const [showNav, setShowNav] = useState(false);
 	const [hideNav, setHideNav] = useState(location.pathname === '/');
 
-	console.log(useWindowWidth(variables.mediaQueries.tablet_number));
+	const links = [
+		{ name: 'Roadmap', link: '#roadmap' },
+		{ name: 'Overview', link: '#Overview' },
+		{ name: 'Roadmap', link: '#Roadmap' },
+		{ name: 'Team', link: '#Team' },
+		{ name: 'Whitelist', link: '#Whitelist' },
+		{ name: 'Login', link: '#Login' },
+		{
+			name: 'Whitepaper',
+			externalLink: 'https://fonts.google.com/specimen/Roboto',
+		},
+		{
+			name: 'Opensea',
+			externalLink: 'https://fonts.google.com/specimen/Roboto',
+		},
+	];
 
 	useEffect(() => {
 		// Every time the location changes the hideNav state it's update
@@ -29,11 +44,13 @@ export const Navigation = () => {
 				duration: 0.5,
 			}}
 			animate={{
-				height: showNav ? '350px' : '60px',
+				height: showNav ? 'fit-content' : '60px',
 			}}
 			style={{
 				// If window is less tha 300px
-				backgroundColor: useWindowWidth(variables.mediaQueries.tablet_number) && (showNav ? variables.colors.bg_default : 'transparent')	
+				backgroundColor:
+					useWindowWidth(variables.mediaQueries.tablet_number) &&
+					(showNav ? variables.colors.bg_default : 'transparent'),
 			}}
 			initial={{ height: '60px' }}
 		>
@@ -50,26 +67,20 @@ export const Navigation = () => {
 				</StyledLink>
 			</Logo>
 			<Ul className='Ul'>
-				<Li className='Li-active'>
-					<StyledLink to='overview'>Overview</StyledLink>
-				</Li>
+				{links.map(({ name, link, externalLink }) => (
+					<Li key={name}>
+						{externalLink ? (
+							<a href={externalLink} target='_blank'>
+								{name}
+							</a>
+						) : (
+							<StyledLink to={link}>{name}</StyledLink>
+						)}
+					</Li>
+				))}
+
 				<Li>
-					<StyledLink to='overview'>Overview</StyledLink>
-				</Li>
-				<Li>
-					<StyledLink to='overview'>Overview</StyledLink>
-				</Li>
-				<Li>
-					<StyledLink to='overview'>Overview</StyledLink>
-				</Li>
-				<Li>
-					<StyledLink to='overview'>Overview</StyledLink>
-				</Li>
-				<Li>
-					<StyledLink to='overview'>Overview</StyledLink>
-				</Li>
-				<Li>
-					<StyledLink to='overview'>
+					<StyledLink to='https://fonts.google.com/specimen/Roboto'>
 						<Mint>Soon</Mint>
 					</StyledLink>
 				</Li>
@@ -127,6 +138,11 @@ const Ul = styled.div`
 const Li = styled.div`
 	font-weight: 300;
 	opacity: 0.8;
+	a {
+		font-weight: 300;
+		opacity: 0.8;
+		color: ${variables.colors.font_default};
+	}
 	&:hover {
 		opacity: 1;
 	}

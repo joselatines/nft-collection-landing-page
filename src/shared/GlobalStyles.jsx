@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const variables = {
 	colors: {
 		primary: '#963aff',
-		secondary: '#3461FF',
+		secondary: '#3496ff',
 		bg_default: '#060606',
 		gray: '#bebebe',
 		dark_gray: '#222',
@@ -12,6 +12,11 @@ export const variables = {
 	},
 	font: {
 		size: '16px',
+		light: 300,
+		regular: 400,
+		medium: 600,
+		bold: 700,
+		black: 900,
 	},
 	mediaQueries: {
 		mobile_l: '425px',
@@ -45,11 +50,11 @@ export const GlobalStyles = createGlobalStyle`
     }
     img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
     a{
         text-decoration: none;
-        color: unset;
+        color:  ${variables.colors.secondary}
     }
     p {
         color: ${variables.font.gray};
@@ -59,20 +64,16 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         color: ${variables.colors.secondary}
     }
-    .gold {
-        color:  #D5AD6D; /*if no support for background-clip*/ 
-        background: -webkit-linear-gradient(transparent, transparent),
-                    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
-        background: -o-linear-gradient(transparent, transparent);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-   }
     .section {
-        padding:  5rem 3rem;
+        padding:  6rem 3rem;
     }
     .title {
         font-size: 4rem; 
-        font-weight: 900;
+        font-weight: ${variables.font.black};
+    }
+    .subtitle {
+        font-size: 2rem; 
+        font-weight: ${variables.font.medium};
     }
   
 `;

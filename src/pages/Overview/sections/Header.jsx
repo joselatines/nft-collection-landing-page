@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variables } from '../../../shared/GlobalStyles';
-import header from './header.png';
+import header from './assets/header.png';
 
 export const Header = () => {
 	return (

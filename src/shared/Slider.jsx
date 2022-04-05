@@ -9,17 +9,10 @@ export const Slider = () => {
 	const toLeft = () => {
 		if (position > 0) {
 			setPosition(position - 1);
-			console.log('left');
-			console.log(position);
 		}
 	};
-	const toRight = () => {
-		if (position < obj.length - 1) {
-			setPosition(position + 1);
-			console.log(position);
-			console.log('right');
-		}
-	};
+	const toRight = () => (position < obj.length - 1) && setPosition(position + 1)
+
 
 	const obj = [
 		{

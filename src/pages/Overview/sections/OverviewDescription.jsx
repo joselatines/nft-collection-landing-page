@@ -3,11 +3,11 @@ import { variables } from '../../../shared/GlobalStyles';
 
 export const OverviewDescription = () => {
 	return (
-		<Container className='section'>
-			<MainTitle className='title'>Real utility actually real</MainTitle>
+		<div className='section'>
+			<h2 className='title'>Magic all around</h2>
 			<Grid>
 				<Element className='a'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
+					<Title>World’s first NFT Collection with a Multi-Value Model.</Title>
 					<Content>
 						A Up to 11 diferent benefits spread over 3 values levels{' '}
 						<a
@@ -16,123 +16,106 @@ export const OverviewDescription = () => {
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							learn more
+							Learn more
 						</a>
 					</Content>
 				</Element>
 				<Element className='b'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
-					<Content>
-						b Up to 11 diferent benefits spread over 3 values levels{' '}
-						<a
-							className='link'
-							href='http://'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							learn more
-						</a>
-					</Content>
+					<Title>
+						<B>DC01</B> <br />
+						<B style={{ fontWeight: variables.font.regular }}>NFT Collection</B>
+					</Title>
+					<Content>DC01 stands for Divitium Chair 01</Content>
 				</Element>
 				<Element className='c'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
+					<Content>Up to an impressive 1000% Retu</Content>
+					<Title>
+						<B>1000%</B> Return of investment
+					</Title>
 					<Content>
-						c Up to 11 diferent benefits spread over 3 values levels{' '}
+						See how it's possible {''}
 						<a
 							className='link'
 							href='http://'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							learn more
+							here
 						</a>
 					</Content>
 				</Element>
-				<Element className='d'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
-					<Content>
-						d Up to 11 diferent benefits spread over 3 values levels{' '}
-						<a
-							className='link'
-							href='http://'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							learn more
-						</a>
-					</Content>
+				<Element className='d' style={{ textAlign: 'center' }}>
+					<Title>
+						<B>1111</B> <br />
+						<B style={{ fontWeight: variables.font.regular }}>Unique NFTs</B>
+					</Title>
 				</Element>
 				<Element className='e'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
-					<Content>
-						e Up to 11 diferent benefits spread over 3 values levels{' '}
-						<a
-							className='link'
-							href='http://'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							learn more
-						</a>
-					</Content>
+					<TitleNumber>
+						<span className='number'>4</span>
+						<div>
+							<B style={{ fontWeight: variables.font.regular }}>
+								Super powerful rarities
+							</B>
+							<Content>
+								Each rarity offers short, medium and long-term benefits
+							</Content>
+						</div>
+					</TitleNumber>
 				</Element>
 				<Element className='f'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
+					<B>333</B>
+					<Title>Whitelist spots</Title>
 					<Content>
-						f Up to 11 diferent benefits spread over 3 values levels{' '}
+						Learn how to get whitelisted {''}
 						<a
 							className='link'
 							href='http://'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							learn more
+							here
 						</a>
 					</Content>
 				</Element>
 				<Element className='g'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
+					<div>
+						<B>111</B>
+						<Title>Backup Whitelist spots</Title>
+					</div>
 					<Content>
-						g Up to 11 diferent benefits spread over 3 values levels{' '}
+						If the 333s get sold out in the whitelist, these 111s will have 2
+						hours early access to mint {''}
 						<a
 							className='link'
 							href='http://'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							learn more
+							learn how
 						</a>
 					</Content>
 				</Element>
 				<Element className='h'>
-					<Title>World's first NFT Collection width a Multi-Value Model</Title>
+					<Title>The breakthrough</Title>
 					<Content>
-						h Up to 11 diferent benefits spread over 3 values levels{' '}
-						<a
-							className='link'
-							href='http://'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							learn more
-						</a>
+						Each NFT is paired 1:1 to a physical product, and that's just the
+						beginning
 					</Content>
 				</Element>
 			</Grid>
-		</Container>
+		</div>
 	);
 };
 
-const Container = styled.section``;
-const MainTitle = styled.h2`
-	text-align: center;
-`;
 const Grid = styled.div`
 	margin: 2rem 0;
 
 	display: grid;
-	grid-template-columns: 1.2fr 0.5fr 1.3fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: auto;
+
+	/* 	grid-template-columns: 1.2fr 0.5fr 1.3fr; */
 	grid-template-areas:
 		'a a b'
 		'c d d'
@@ -164,10 +147,6 @@ const Grid = styled.div`
 	}
 
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
-	}
-	@media only screen and (max-width: ${variables.mediaQueries.mobile_l}) {
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			'a'
@@ -201,13 +180,28 @@ const Element = styled.article`
 		border-right: none;
 	}
 `;
-
-const Title = styled.h3`
-	font-weight: 600;
-	font-size: 1.5rem;
-`;
 const Content = styled.p`
 	font-weight: 400;
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 3rem);
+	margin: 0.5rem 0;
 	color: ${variables.colors.gray};
+`;
+const Title = styled.span`
+	font-size: clamp(1.3rem, 3vw, 8rem);
+	font-weight: ${variables.font.regular};
+`;
+
+const TitleNumber = styled.div`
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	.number {
+		font-size: clamp(2rem, 4.5vw, 10rem);
+		font-weight: ${variables.font.bold};
+	}
+`;
+
+const B = styled(Title)`
+	font-size: clamp(1.3rem, 4vw, 10rem);
+	font-weight: ${variables.font.medium};
 `;

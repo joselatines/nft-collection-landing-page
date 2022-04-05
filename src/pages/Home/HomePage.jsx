@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import { StyledLink, variables } from '../../shared/GlobalStyles';
 
@@ -83,7 +82,7 @@ const Container = styled.main`
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	height: 80vh;
+	min-height: 87vh;
 	img {
 		width: 1rem;
 	}

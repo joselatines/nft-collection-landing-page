@@ -4,7 +4,7 @@ import { Navigation } from './shared/Navigation';
 import { Footer } from './shared/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-export const App = () => {
+const App = () => {
 	return (
 		<BrowserRouter>
 			<Navigation />
@@ -17,3 +17,5 @@ export const App = () => {
 		</BrowserRouter>
 	);
 };
+
+export default App;
