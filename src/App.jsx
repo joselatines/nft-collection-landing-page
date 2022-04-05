@@ -1,4 +1,4 @@
-import { HomePage } from './pages/home/HomePage';
+import { HomePage } from './pages/HomePage';
 import { OverviewPage } from './pages/overview/OverviewPage';
 import { Navigation } from './shared/Navigation';
 import { Footer } from './shared/Footer';

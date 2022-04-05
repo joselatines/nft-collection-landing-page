@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { StyledLink, variables } from '../../shared/GlobalStyles';
+import { StyledLink, variables } from '../shared/GlobalStyles';
 
 export const HomePage = () => {
 	return (
