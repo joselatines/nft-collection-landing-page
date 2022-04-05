@@ -1,5 +1,5 @@
 import { HomePage } from './pages/Home';
-import { OverviewPage } from './pages/overview/Family';
+import { Overview } from './pages/overview/Overview';
 import { Navigation } from './shared/Navigation';
 import { Footer } from './shared/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -10,7 +10,7 @@ const App = () => {
 			<Navigation />
 			<Routes>
 				<Route path='/' element={<HomePage />} />
-				<Route path='/overview' element={<OverviewPage />} />
+				<Route path='/overview' element={<Overview />} />
 				<Route path='' element={<div>Not found</div>} />
 			</Routes>
 			<Footer />
