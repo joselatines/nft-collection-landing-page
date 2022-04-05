@@ -64,15 +64,28 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         color: ${variables.colors.secondary}
     }
+    .gold {
+        background: rgb(207,192,159);
+        background: -moz-linear-gradient(180deg, rgba(207,192,159,1) 0%, rgba(255,236,179,1) 45%, rgba(174,127,34,1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(207,192,159,1) 0%, rgba(255,236,179,1) 45%, rgba(174,127,34,1) 100%);
+        background: linear-gradient(180deg, rgba(207,192,159,1) 0%, rgba(255,236,179,1) 45%, rgba(174,127,34,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cfc09f",endColorstr="#ae7f22",GradientType=1);
+        -webkit-background-clip: text; // To work in text
+        -webkit-text-fill-color: transparent; // To work in text
+        color: ${variables.colors.primary};
+    }
     .section {
-        padding:  6rem 3rem;
+        padding: 5rem;
+        @media only screen and (max-width: ${variables.mediaQueries.tablet}) {
+            padding:  1rem ;
+        }
     }
     .title {
-        font-size: 4rem; 
+        font-size: clamp(1rem, 5vw, 8rem);
         font-weight: ${variables.font.black};
     }
     .subtitle {
-        font-size: 2rem; 
+        font-size: clamp(.8rem, 4vw, 7rem);
         font-weight: ${variables.font.medium};
     }
   

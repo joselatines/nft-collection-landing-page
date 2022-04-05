@@ -32,7 +32,8 @@ export const NFTOverview = ({
 
 const Container = styled.div`
 	display: flex;
-	height: 100vh;
+	justify-content: center;
+	align-items: center;
 	gap: 5rem;
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
 		flex-wrap: wrap;

@@ -79,8 +79,11 @@ export const NFTSOverview = () => {
 };
 
 const Container = styled.section`
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
 	.titles {
 		text-align: center;
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
 	}
 `;
