@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variables } from '../../../shared/GlobalStyles';
-import header from './assets/header.png';
+import img from './assets/header.png';
 
 export const Header = () => {
 	return (
@@ -13,7 +13,7 @@ export const Header = () => {
 
 const Container = styled.header`
 	background-color: ${variables.colors.bg_default};
-	background-image: url(${header});
+	background-image: url(${img});
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
