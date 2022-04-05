@@ -1,6 +1,6 @@
-import { Header } from './Sections/Header';
-import { NFTSOverview } from './Sections/NFTSOverview';
-import { OverviewDescription } from './Sections/OverviewDescription';
+import { Header } from './sections/Header';
+import { NFTSOverview } from './sections/NFTSOverview';
+import { OverviewDescription } from './sections/OverviewDescription';
 
 export const OverviewPage = () => {
 	return (

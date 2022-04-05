@@ -1,5 +1,5 @@
-import { HomePage } from './pages/Home/HomePage';
-import { OverviewPage } from './pages/Overview/OverviewPage';
+import { HomePage } from './pages/home/HomePage';
+import { OverviewPage } from './pages/overview/OverviewPage';
 import { Navigation } from './shared/Navigation';
 import { Footer } from './shared/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

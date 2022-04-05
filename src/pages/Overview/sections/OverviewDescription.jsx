@@ -9,7 +9,7 @@ export const OverviewDescription = () => {
 				<Element className='a'>
 					<Title>World’s first NFT Collection with a Multi-Value Model.</Title>
 					<Content>
-						A Up to 11 diferent benefits spread over 3 values levels{' '}
+						A Up to 11 different benefits spread over 3 values levels{' '}
 						<a
 							className='link'
 							href='http://'
@@ -28,7 +28,7 @@ export const OverviewDescription = () => {
 					<Content>DC01 stands for Divitium Chair 01</Content>
 				</Element>
 				<Element className='c'>
-					<Content>Up to an impressive 1000% Retu</Content>
+					<Content>Up to an impressive 1000% Return</Content>
 					<Title>
 						<B>1000%</B> Return of investment
 					</Title>

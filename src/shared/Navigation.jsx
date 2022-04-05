@@ -14,7 +14,6 @@ export const Navigation = () => {
 	const [hideNav, setHideNav] = useState(location.pathname === '/');
 
 	const links = [
-		{ name: 'Roadmap', link: '#roadmap' },
 		{ name: 'Overview', link: '#Overview' },
 		{ name: 'Roadmap', link: '#Roadmap' },
 		{ name: 'Team', link: '#Team' },
