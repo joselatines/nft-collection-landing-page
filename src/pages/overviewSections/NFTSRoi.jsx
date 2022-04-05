@@ -11,9 +11,9 @@ export const NFTSRoi = () => {
 			name: 'Divitium Solidum',
 			rarity: 'Radical',
 			supply: '500 pcs',
-			supplyPercentage: 90, // This is for css
+			supplyPercentage: 100, // This is for css
 			roi: '2x',
-			roiPercentage: 10, // This is for css
+			roiPercentage: 20, // This value has to be higher than 10
 		},
 		{
 			img: epic,
@@ -38,9 +38,9 @@ export const NFTSRoi = () => {
 			name: 'Divitium Flamium',
 			rarity: 'Epic',
 			supply: '20 pcs',
-			supplyPercentage: 10,
+			supplyPercentage: 20,
 			roi: '5x',
-			roiPercentage: 90,
+			roiPercentage: 100,
 		},
 	];
 

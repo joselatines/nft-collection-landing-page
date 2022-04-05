@@ -77,11 +77,11 @@ export const GlobalStyles = createGlobalStyle`
     .section {
         padding: 5rem;
         @media only screen and (max-width: ${variables.mediaQueries.tablet}) {
-            padding:  1rem ;
+            padding: 2rem 1rem ;
         }
     }
     .title {
-        font-size: clamp(1rem, 5vw, 8rem);
+        font-size: clamp(1.3rem, 15vw, 5rem);
         font-weight: ${variables.font.black};
     }
     .subtitle {

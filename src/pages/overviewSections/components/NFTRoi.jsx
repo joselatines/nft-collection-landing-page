@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { css } from 'styled-components';
 import { variables } from '../../../shared/GlobalStyles';
@@ -11,6 +12,20 @@ export const NFTRoi = ({
 	supplyPercentage,
 	roiPercentage,
 }) => {
+	const supplyVariants = {
+		hidden: { width: '0%' },
+		visible: {
+			width: supplyPercentage - 10 + '%',
+			transition: { duration: 3 },
+		},
+	};
+	const roiVariants = {
+		hidden: { width: '0%', color: 'blue' },
+		visible: {
+			width: roiPercentage - 10 + '%',
+			transition: { duration: 3 },
+		},
+	};
 	return (
 		<Container>
 			<Img>
@@ -19,10 +34,26 @@ export const NFTRoi = ({
 			<Content>
 				<Title>{name}</Title>
 				<Subtitle className='gold'>{rarity}</Subtitle>
+
 				<Effect percentageType='supply' percentage={supplyPercentage}>
+					<motion.span
+						variants={supplyVariants}
+						initial='hidden'
+						whileInView='visible'
+						viewport={{ once: true }}
+						className='bar'
+					></motion.span>
 					<span>{supply}</span>
 				</Effect>
+
 				<Effect percentageType='roi' percentage={roiPercentage}>
+					<motion.span
+						variants={roiVariants}
+						initial='hidden'
+						whileInView='visible'
+						viewport={{ once: true }}
+						className='bar'
+					></motion.span>
 					<span className='gold'>{roi}</span>
 				</Effect>
 			</Content>
@@ -46,7 +77,7 @@ const Container = styled.div`
 	display: grid;
 	grid-template-columns: 13rem auto;
 	gap: 2rem;
-	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
+	@media only screen and (max-width: ${variables.mediaQueries.mobile_l}) {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto;
 		gap: 0rem;
@@ -70,9 +101,8 @@ const Effect = styled.div`
 	display: flex;
 	align-items: baseline;
 	gap: 0.5rem;
-	&::before {
-		content: '';
-		width: ${props => props.percentage}%;
+	.bar {
+		/* 		width: ${props => props.percentage}%; */
 		height: 2px;
 		display: block;
 		background-color: ${variables.colors.font_default};

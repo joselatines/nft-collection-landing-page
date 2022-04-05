@@ -13,22 +13,30 @@ export const NFTOverview = ({
 }) => {
 	return (
 		<Container style={{ flexDirection: left && 'row-reverse' }}>
-			<Left>
-				<div className='subtitle'>{title}</div>
-				<ul>
-					<li>Type: {type}</li>
-					<li>Rarity: {rarity}</li>
-					<li>Supply: {supply}</li>
-					<li>ROI: {roi}</li>
-				</ul>
+			<Content>
+				<div className='title'>{title}</div>
 				<p>{description}</p>
-			</Left>
-			<Right>
+			</Content>
+			<Img>
 				<img src={img} alt={type} />
-			</Right>
+			</Img>
 		</Container>
 	);
 };
+
+const Content = styled.div`
+	width: 50%;
+	p {
+		color: ${variables.colors.gray};
+		font-weight: ${variables.font.regular};
+		margin: 1rem 0;
+	}
+`;
+const Img = styled.div`
+	overflow: hidden;
+	width: 50%;
+	height: 70%;
+`;
 
 const Container = styled.div`
 	display: flex;
@@ -36,28 +44,28 @@ const Container = styled.div`
 	align-items: center;
 	gap: 5rem;
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
-		flex-wrap: wrap;
-	}
-`;
-const Left = styled.div`
-	width: 50%;
-	.subtitle {
-		font-size: clamp(1.3rem, 6vw, 10rem);
-	}
-	ul {
-		list-style-type: none;
-		margin: 1.5rem 0;
-		li {
-			margin: 0.5rem 0;
+		// Make responsive and images over text
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			'content'
+			'img';
+		align-self: center;
+		gap: 1rem;
+		${Img}, ${Content} {
+			width: 100%;
+			height: 100%;
+		}
+		${Img} {
+			grid-area: img;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		${Content} {
+			grid-area: content;
+			width: 100%;
 		}
 	}
-	p {
-		color: ${variables.colors.gray};
-		font-weight: ${variables.font.regular};
-	}
-`;
-const Right = styled.div`
-	overflow: hidden;
-	width: 50%;
-	height: 70%;
 `;

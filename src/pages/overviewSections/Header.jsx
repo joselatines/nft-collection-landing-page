@@ -4,7 +4,7 @@ import img from './assets/header.png';
 
 export const Header = () => {
 	return (
-		<Container className='section'>
+		<Container id='overview' className='section'>
 			<Subtitle>DC01 NFT Collection</Subtitle>
 			<Title>Not the kind of collection you know</Title>
 		</Container>

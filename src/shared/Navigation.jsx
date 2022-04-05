@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { HashLink } from 'react-router-hash-link';
 
 import { StyledLink, variables } from './GlobalStyles';
 import logo from './assets/img/logo.png';
@@ -14,11 +15,11 @@ export const Navigation = () => {
 	const [hideNav, setHideNav] = useState(location.pathname === '/');
 
 	const links = [
-		{ name: 'Overview', link: '#Overview' },
-		{ name: 'Roadmap', link: '#Roadmap' },
-		{ name: 'Team', link: '#Team' },
-		{ name: 'Whitelist', link: '#Whitelist' },
-		{ name: 'Login', link: '#Login' },
+		{ name: 'Overview', link: '#overview' },
+		{ name: 'Roadmap', link: '/overview#roadmap' },
+		{ name: 'Team', link: '/team' },
+		{ name: 'Whitelist', link: '/whitelist' },
+		{ name: 'Login', link: '/login' },
 		{
 			name: 'Whitepaper',
 			externalLink: 'https://fonts.google.com/specimen/Roboto',
@@ -73,7 +74,9 @@ export const Navigation = () => {
 								{name}
 							</a>
 						) : (
-							<StyledLink to={link}>{name}</StyledLink>
+							<HashLink smooth to={link}>
+								{name}
+							</HashLink>
 						)}
 					</Li>
 				))}

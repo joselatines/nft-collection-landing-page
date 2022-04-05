@@ -81,9 +81,11 @@ export const NFTSOverview = () => {
 const Container = styled.section`
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
 	.titles {
 		text-align: center;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 `;
