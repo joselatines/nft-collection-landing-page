@@ -5,7 +5,7 @@ import { StyledLink, variables } from '../shared/GlobalStyles';
 export const HomePage = () => {
 	return (
 		<Container>
-			<StyledLink to='overview'>
+			<StyledLink to='/overview'>
 				<SpinnerBlock className='spinner-block'>
 					<SpinnerTitle>DC01</SpinnerTitle>
 					<Spinner className='spinner spinner-3'></Spinner>
