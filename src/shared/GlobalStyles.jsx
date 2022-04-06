@@ -20,6 +20,7 @@ export const variables = {
 	},
 	mediaQueries: {
 		mobile_l: '425px',
+		mobile_xl: '535px',
 		tablet: '768px',
 		tablet_number: 768,
 		laptop: '1024px',
@@ -77,7 +78,7 @@ export const GlobalStyles = createGlobalStyle`
     .section {
         padding: 5rem;
         @media only screen and (max-width: ${variables.mediaQueries.tablet}) {
-            padding: 2rem 1rem ;
+            padding: 2rem ;
         }
     }
     .title {

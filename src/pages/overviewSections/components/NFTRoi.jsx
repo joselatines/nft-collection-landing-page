@@ -33,7 +33,9 @@ export const NFTRoi = ({
 			</Img>
 			<Content>
 				<Title>{name}</Title>
-				<Subtitle className='gold'>{rarity}</Subtitle>
+				<Subtitle className='gold' loading='lazy'>
+					{rarity}
+				</Subtitle>
 
 				<Effect percentageType='supply' percentage={supplyPercentage}>
 					<motion.span
@@ -85,6 +87,9 @@ const Container = styled.div`
 		margin-bottom: 2rem;
 		${Img} {
 			padding: 0;
+		}
+		${Content} {
+			border: none;
 		}
 	}
 `;

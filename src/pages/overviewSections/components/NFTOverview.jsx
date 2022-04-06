@@ -41,9 +41,9 @@ const Img = styled.div`
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	gap: 5rem;
-	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
+	@media only screen and (max-width: ${variables.mediaQueries.mobile_xl}) {
 		// Make responsive and images over text
 		display: grid;
 		grid-template-columns: auto;
