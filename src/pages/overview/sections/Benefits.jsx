@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Benefit } from './benefitsComponents/Benefit';
-import { variables } from '../shared/GlobalStyles';
+import { Benefit } from './components/Benefit';
+import { variables } from '../../../shared/GlobalStyles';
 
 export const Benefits = () => {
 	const benefits = [

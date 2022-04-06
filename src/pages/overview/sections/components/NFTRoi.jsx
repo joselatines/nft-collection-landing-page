@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { css } from 'styled-components';
-import { variables } from '../../../shared/GlobalStyles';
+import { variables } from '../../../../shared/GlobalStyles';
 
 export const NFTRoi = ({
 	img,
@@ -107,12 +107,11 @@ const Effect = styled.div`
 	align-items: baseline;
 	gap: 0.5rem;
 	.bar {
-		/* 		width: ${props => props.percentage}%; */
 		height: 2px;
 		display: block;
 		background-color: ${variables.colors.font_default};
 		${props =>
-			props.percentageType == 'roi' &&
+			props.percentageType === 'roi' &&
 			css`
 				background: rgb(207, 192, 159);
 				background: -moz-linear-gradient(

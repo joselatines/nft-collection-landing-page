@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '../../shared/GlobalStyles';
+import { variables } from '../../../shared/GlobalStyles';
 import img from './assets/header.png';
 
 export const Header = () => {

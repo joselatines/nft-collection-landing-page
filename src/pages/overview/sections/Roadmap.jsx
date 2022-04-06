@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '../shared/GlobalStyles';
+import { variables } from '../../../shared/GlobalStyles';
 
 export const Roadmap = () => {
 	return <Container className='section'>
