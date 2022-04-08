@@ -4,6 +4,7 @@ import { NFTSOverview } from './sections/NFTSOverview';
 import { NFTSRoi } from './sections/NFTSRoi';
 import { OverviewDescription } from './sections/OverviewDescription';
 import { Roadmap } from './sections/Roadmap';
+import { Team } from './sections/Team';
 
 export const Overview = () => {
 	return (
@@ -14,6 +15,7 @@ export const Overview = () => {
 			<NFTSRoi />
 			<Benefits />
 			<Roadmap />
+			<Team />
 		</main>
 	);
 };

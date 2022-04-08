@@ -19,6 +19,7 @@ export const variables = {
 		black: 900,
 	},
 	mediaQueries: {
+		mobile: '315px',
 		mobile_l: '425px',
 		mobile_xl: '535px',
 		tablet: '768px',
@@ -26,7 +27,9 @@ export const variables = {
 		laptop: '1024px',
 	},
 	transitions: {
-		short: 'ease-in-out .5s',
+		css: '.5 ease-in-out',
+		duration: 1,
+		ease: 'easeInOut',
 	},
 };
 
@@ -60,6 +63,12 @@ export const GlobalStyles = createGlobalStyle`
     p {
         color: ${variables.font.gray};
     }
+    ul {    
+        li {  
+            padding-inline-start: none;   
+            line-height: 1.5;
+        }
+    }
 
     .link {
         font-weight: 400;
@@ -86,7 +95,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: ${variables.font.black};
     }
     .subtitle {
-        font-size: clamp(.8rem, 4vw, 7rem);
+        font-size: clamp(1.2rem, 4vw, 7rem);
         font-weight: ${variables.font.medium};
     }
   

@@ -16,16 +16,17 @@ export const NFTRoi = ({
 		hidden: { width: '0%' },
 		visible: {
 			width: supplyPercentage - 10 + '%',
-			transition: { duration: 3 },
+			transition: { duration: 2, ease: 'easeInOut' },
 		},
 	};
 	const roiVariants = {
 		hidden: { width: '0%', color: 'blue' },
 		visible: {
 			width: roiPercentage - 10 + '%',
-			transition: { duration: 3 },
+			transition: { duration: 2, ease: 'easeInOut' },
 		},
 	};
+
 	return (
 		<Container>
 			<Img>
@@ -79,6 +80,7 @@ const Container = styled.div`
 	display: grid;
 	grid-template-columns: 13rem auto;
 	gap: 2rem;
+
 	@media only screen and (max-width: ${variables.mediaQueries.mobile_l}) {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto;

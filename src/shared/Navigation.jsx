@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { HashLink } from 'react-router-hash-link';
 
 import { StyledLink, variables } from './GlobalStyles';
-import logo from './assets/img/logo.png';
+import logo from './assets/img/logo-white.png';
 import { useEffect } from 'react';
 import { useWindowWidth } from '../hooks/useWindowWidth';
 
@@ -17,7 +17,7 @@ export const Navigation = () => {
 	const links = [
 		{ name: 'Overview', link: '#overview' },
 		{ name: 'Roadmap', link: '/overview#roadmap' },
-		{ name: 'Team', link: '/team' },
+		{ name: 'Team', link: '/overview#team' },
 		{ name: 'Whitelist', link: '/whitelist' },
 		{ name: 'Login', link: '/login' },
 		{
@@ -102,6 +102,7 @@ const Container = styled(motion.header)`
 	position: fixed;
 	top: 15px;
 	left: 50%;
+	z-index: 100;
 	transform: translateX(-50%);
 	width: 90%;
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {

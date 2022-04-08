@@ -36,7 +36,7 @@ export const NFTSOverview = () => {
 			rarity: 'Legendary',
 			supply: '191 pcs',
 			roi: '8x',
-			left: false,
+			left: true,
 			description:
 				'This DC01 NFT offers a 800% return on investment. When the physical product that bears the same serial number as this piece is sold, the holder will receive 8 times the original minting price they paid on Private or Public Sale.',
 		},
@@ -47,7 +47,7 @@ export const NFTSOverview = () => {
 			rarity: 'Supreme',
 			supply: '20 pcs',
 			roi: '10x',
-			left: true,
+			left: false,
 			description:
 				'This DC01 NFT offers a 1000% return on investment. When the physical product that bears the same serial number as this piece is sold, the holder will receive 10 times the original minting price they paid on Private or Public Sale',
 		},

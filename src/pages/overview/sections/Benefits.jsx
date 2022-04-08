@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Benefit } from './components/Benefit';
 import { variables } from '../../../shared/GlobalStyles';
 
@@ -6,7 +7,7 @@ export const Benefits = () => {
 	const benefits = [
 		{
 			title:
-				"Meet our astonishing scale of benefits, we'll beginning with Level 1",
+				"Meet our astonishing scale of benefiddddddts, we'll beginning with Level 1",
 			lis: [
 				'Highest quality NFT art',
 				'Very limited pieces',
@@ -37,7 +38,7 @@ export const Benefits = () => {
 			],
 		},
 		{
-			title: 'Level 2',
+			title: 'Level 3',
 			lis: [
 				'Highest quality NFT art',
 				'Very limited pieces',
@@ -48,35 +49,59 @@ export const Benefits = () => {
 		},
 	];
 
+	const containerVar = {
+		hidden: {},
+		show: {
+			transition: {
+				staggerChildren: 1,
+			},
+		},
+	};
+	const itemVar = {
+		hidden: { opacity: 0, y: -50 },
+		show: {
+			opacity: 1,
+			y: 0,
+			transition: { duration: 2, ease: 'easeInOut' },
+		},
+	};
+
 	return (
-		<Container className='section'>
-			{benefits.map(({ title, lis }) => (
-				<div className='div'>
-					<span className='title'>More gain? Okay.</span>
-					<div className='benefitsContainer'>
-						<Benefit key={title} title={title} lis={lis} />
-					</div>
-				</div>
-			))}
+		<Container
+			initial='hidden'
+			whileInView='show'
+			viewport={{ once: true }}
+			variants={containerVar}
+			className='section'
+		>
+			<span className='title'>
+				Gain, No Pain.
+			</span>
+			<motion.div className='benefitsContainer'>
+				{benefits.map(({ title, lis }) => (
+					<motion.div variants={itemVar} key={title}>
+						<Benefit title={title} lis={lis} />
+					</motion.div>
+				))}
+			</motion.div>
 		</Container>
 	);
 };
 
-const Container = styled.section`
+const Container = styled(motion.div)`
 	display: grid;
 	gap: 5rem;
-	.div {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 2rem;
-		@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
-			grid-template-columns: 1fr;
-		}
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	overflow: hidden;
+	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
+		grid-template-columns: 1fr;
 	}
 	.benefitsContainer {
 		display: grid;
-		gap: 2rem;
+		gap: 3rem;
 	}
 `;

@@ -46,8 +46,22 @@ export const NFTSRoi = () => {
 
 	return (
 		<section className='section'>
+			<div
+				className='title'
+				style={{ textAlign: 'center', marginBottom: '2rem' }}
+			>
+				NFT main specs.
+			</div>
 			{nfts.map(
-				({ img, name, rarity, supply, roi, supplyPercentage, roiPercentage}) => (
+				({
+					img,
+					name,
+					rarity,
+					supply,
+					roi,
+					supplyPercentage,
+					roiPercentage,
+				}) => (
 					<NFTRoi
 						key={name}
 						img={img}
@@ -63,4 +77,3 @@ export const NFTSRoi = () => {
 		</section>
 	);
 };
-

@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import logo from './assets/img/logo-white.png';
 import { variables } from './GlobalStyles';
+
 
 export const Footer = () => {
 	return (
 		<Container>
 			<img
-				src='https://i.ibb.co/cvsMgL3/divitium-white.png'
+				src={logo}
 				alt='divitium-white'
 			/>
 			<Copyright>
