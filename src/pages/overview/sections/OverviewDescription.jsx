@@ -1,12 +1,51 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
 import { variables } from '../../../shared/GlobalStyles';
+import { TitleSection } from '../../../shared/GlobalStyles';
 
 export const OverviewDescription = () => {
+	// This code can be refactor with a main container to not overwrite "initial='hidden, 	whileInView='show''" but the staggerChildren is not working properly
+	
+	const fromRightVar = {
+		hidden: { x: -200, opacity: 0 },
+		show: {
+			x: 0,
+			opacity: 1,
+
+			transition: {
+				duration: variables.transitions.duration,
+				ease: variables.transitions.ease,
+				delay: 0.3,
+			},
+		},
+	};
+
+	const fromLeftVar = {
+		hidden: { x: 200, opacity: 0 },
+		show: {
+			x: 0,
+			opacity: 1,
+
+			transition: {
+				duration: variables.transitions.duration,
+				ease: variables.transitions.ease,
+				delay: 0.3,
+			},
+		},
+	};
+
 	return (
 		<div className='section'>
-			<h2 className='title'>Magic all around</h2>
+			<TitleSection content={'Magic all around'} />
 			<Grid>
-				<Element className='a'>
+				<Element
+					className='a'
+					variants={fromRightVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<Title>World’s first NFT Collection with a Multi-Value Model.</Title>
 					<Content>
 						A Up to 11 different benefits spread over 3 values levels{' '}
@@ -20,14 +59,26 @@ export const OverviewDescription = () => {
 						</a>
 					</Content>
 				</Element>
-				<Element className='b'>
+				<Element
+					className='b'
+					variants={fromLeftVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<Title>
 						<B>DC01</B> <br />
 						<B style={{ fontWeight: variables.font.regular }}>NFT Collection</B>
 					</Title>
 					<Content>DC01 stands for Divitium Chair 01</Content>
 				</Element>
-				<Element className='c'>
+				<Element
+					className='c'
+					variants={fromRightVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<Content>Up to an impressive 1000% Return</Content>
 					<Title>
 						<B>1000%</B> Return of investment
@@ -44,13 +95,26 @@ export const OverviewDescription = () => {
 						</a>
 					</Content>
 				</Element>
-				<Element className='d' style={{ textAlign: 'center' }}>
+				<Element
+					className='d'
+					variants={fromLeftVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+					style={{ textAlign: 'center' }}
+				>
 					<Title>
 						<B>1111</B> <br />
 						<B style={{ fontWeight: variables.font.regular }}>Unique NFTs</B>
 					</Title>
 				</Element>
-				<Element className='e'>
+				<Element
+					className='e'
+					variants={fromRightVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<TitleNumber>
 						<span className='number'>4</span>
 						<div>
@@ -63,7 +127,13 @@ export const OverviewDescription = () => {
 						</div>
 					</TitleNumber>
 				</Element>
-				<Element className='f'>
+				<Element
+					className='f'
+					variants={fromLeftVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<B>333</B>
 					<Title>Whitelist spots</Title>
 					<Content>
@@ -78,7 +148,13 @@ export const OverviewDescription = () => {
 						</a>
 					</Content>
 				</Element>
-				<Element className='g'>
+				<Element
+					className='g'
+					variants={fromRightVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<div>
 						<B>111</B>
 						<Title>Backup Whitelist spots</Title>
@@ -96,7 +172,13 @@ export const OverviewDescription = () => {
 						</a>
 					</Content>
 				</Element>
-				<Element className='h'>
+				<Element
+					className='h'
+					variants={fromLeftVar}
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+				>
 					<Title>The breakthrough</Title>
 					<Content>
 						Each NFT is paired 1:1 to a physical product, and that's just the
@@ -108,8 +190,9 @@ export const OverviewDescription = () => {
 	);
 };
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
 	margin: 2rem 0;
+	overflow: hidden; // for animation
 
 	display: grid;
 	grid-template-columns: repeat(3, auto);
@@ -159,7 +242,7 @@ const Grid = styled.div`
 			'h';
 	}
 `;
-const Element = styled.article`
+const Element = styled(motion.article)`
 	border: solid 1px ${variables.colors.dark_gray};
 	padding: 3rem;
 	display: flex;

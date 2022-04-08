@@ -1,5 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled, { createGlobalStyle } from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const variables = {
 	colors: {
@@ -32,6 +33,30 @@ export const variables = {
 		ease: 'easeInOut',
 	},
 };
+
+export const TitleSection = ({ content }) => {
+	return (
+		<TitleSectionStyles
+			initial={{ y: 50, opacity: 0 }}
+			whileInView={{
+				y: 0,
+				opacity: 1,
+				transition: {
+					duration: variables.transitions.duration,
+					ease: variables.transitions.ease,
+				},
+			}}
+			viewport={{ once: true }}
+		>
+			{content}
+		</TitleSectionStyles>
+	);
+};
+
+const TitleSectionStyles = styled(motion.h3)`
+	font-size: clamp(1.3rem, 15vw, 5rem);
+	font-weight: ${variables.font.black};
+`;
 
 export const StyledLink = styled(Link)`
 	all: unset;

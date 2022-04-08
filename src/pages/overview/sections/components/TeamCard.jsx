@@ -1,20 +1,28 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { variables } from '../../../../shared/GlobalStyles';
 
 export const TeamCard = ({ name, content, img }) => {
 	const [isFlip, setIsFlip] = useState(false); // Delete this if you want to flip on hover
 
-	return (
-		<Card onClick={() => setIsFlip(!isFlip)} isFlip={isFlip} img={img}>
-			<div className='front'></div>
+	const cardVar = {
+		hidden: { scale: 0 },
+		show: { scale: 1, transition: { duration: 1 } },
+	};
 
-			<div className='back'>
-				<p>
-					<strong>{name}</strong> {content}
-				</p>
-			</div>
-		</Card>
+	return (
+		<motion.div variants={cardVar} initial='hidden' whileInView='show'>
+			<Card onClick={() => setIsFlip(!isFlip)} isFlip={isFlip} img={img}>
+				<div className='front'></div>
+
+				<div className='back'>
+					<p>
+						<strong>{name}</strong> {content}
+					</p>
+				</div>
+			</Card>
+		</motion.div>
 	);
 };
 

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { TeamCard } from './components/TeamCard';
 import team1 from './assets/team1.png';
-import { variables } from '../../../shared/GlobalStyles';
+import { TitleSection, variables } from '../../../shared/GlobalStyles';
 import { Button } from '../../../shared/Button';
 
 export const Team = () => {
@@ -48,8 +49,22 @@ export const Team = () => {
 	return (
 		<Container id='team' className='section'>
 			<div className='titles'>
-				<h4 className='title'>Team</h4>
-				<span className='subtitle'>Look who's behind, literally.</span>
+				<TitleSection content='Team' />
+				<motion.h3
+					className='subtitle'
+					initial={{ x: 50, opacity: 0 }}
+					whileInView={{
+						x: 0,
+						opacity: 1,
+						transition: {
+							duration: variables.transitions.duration,
+							ease: variables.transitions.ease,
+						},
+					}}
+					viewport={{ once: true }}
+				>
+					Look who's behind, literally.
+				</motion.h3>
 			</div>
 			<div className='innerContainer'>
 				<div className='teamContainer'>
@@ -64,6 +79,7 @@ export const Team = () => {
 };
 
 const Container = styled.section`
+	overflow: hidden;
 	.teamContainer {
 		display: flex;
 		flex-wrap: wrap;

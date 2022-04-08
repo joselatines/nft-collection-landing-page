@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { variables } from '../../../../../shared/GlobalStyles';
 import { Stage } from './Stage';
@@ -57,16 +58,26 @@ export const RoadmapComponent = () => {
 		},
 	];
 
+	const stageVar = {
+		hidden: { x: -300 },
+		show: {
+			x: 0,
+			transition: { duration: 1 },
+		},
+	};
+
 	return (
 		<Container>
 			{stages.map(({ stage, title, items, link }) => (
-				<Stage
+				<motion.div
 					key={stage}
-					stage={stage}
-					title={title}
-					items={items}
-					link={link}
-				/>
+					variants={stageVar}
+					initial='hidden'
+					whileInView='show'
+					viewport={{ once: true }}
+				>
+					<Stage stage={stage} title={title} items={items} link={link} />
+				</motion.div>
 			))}
 			<a href='http://' target='_blank' rel='noopener noreferrer'></a>
 			<Button
@@ -88,4 +99,6 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 5rem;
+
+	overflow: hidden;
 `;

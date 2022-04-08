@@ -3,6 +3,7 @@ import radical from './assets/radical.png';
 import legendary from './assets/legendary.png';
 import supreme from './assets/supreme.jpg';
 import { NFTRoi } from './components/NFTRoi';
+import { TitleSection } from '../../../shared/GlobalStyles';
 
 export const NFTSRoi = () => {
 	const nfts = [
@@ -46,11 +47,8 @@ export const NFTSRoi = () => {
 
 	return (
 		<section className='section'>
-			<div
-				className='title'
-				style={{ textAlign: 'center', marginBottom: '2rem' }}
-			>
-				NFT main specs.
+			<div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+				<TitleSection content='NFT main specs' />
 			</div>
 			{nfts.map(
 				({

@@ -4,6 +4,7 @@ import epic from './assets/epic.png';
 import radical from './assets/radical.png';
 import legendary from './assets/legendary.png';
 import supreme from './assets/supreme.jpg';
+import { TitleSection } from '../../../shared/GlobalStyles';
 
 export const NFTSOverview = () => {
 	const nfts = [
@@ -56,8 +57,8 @@ export const NFTSOverview = () => {
 	return (
 		<Container className='section'>
 			<div className='titles'>
-				<span className='title'>Real Product</span> <br />
-				<span className='title'>Real Impact</span>
+				<TitleSection content='Real Product' />
+				<TitleSection content='Real Impact' />
 			</div>
 			{nfts.map(
 				({ img, title, type, rarity, supply, roi, description, left }) => (
