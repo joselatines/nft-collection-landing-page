@@ -6,7 +6,7 @@ import img from './assets/header-min.jpg';
 import { ScrollDown } from './components/ScrollDown';
 
 export const Header = () => {
-	const line1 = 'NFT NFT Collection';
+	const line1 = 'NFT Collection';
 
 	const containerVar = {
 		hidden: {},
