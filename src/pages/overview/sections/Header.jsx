@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { variables } from '../../../shared/GlobalStyles';
-import img from './assets/header.png';
+import img from './assets/header-min.jpg';
 import { ScrollDown } from './components/ScrollDown';
 
 export const Header = () => {
-	const line1 = 'DC01 NFT Collection';
+	const line1 = 'NFT NFT Collection';
 
 	const containerVar = {
 		hidden: {},
@@ -52,7 +52,7 @@ export const Header = () => {
 				})}
 			</Subtitle>
 			<Title variants={titleVar} className='title'>
-				Not the kind of collection you know.
+				ROCKIN' THE SOLANA NETWORK
 			</Title>
 			<div className='scroll'>
 				<ScrollDown />

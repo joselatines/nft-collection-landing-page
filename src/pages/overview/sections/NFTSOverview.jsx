@@ -1,64 +1,64 @@
 import styled from 'styled-components';
 import { NFTOverview } from './components/NFTOverview';
-import epic from './assets/epic.png';
-import radical from './assets/radical.png';
-import legendary from './assets/legendary.png';
-import supreme from './assets/supreme.jpg';
+import orange from './assets/orange-min.jpg';
+import purple from './assets/purple-min.jpg';
+import yellow from './assets/yellow-min.jpg';
+import blue from './assets/blue-min.jpg';
 import { TitleSection } from '../../../shared/GlobalStyles';
 
 export const NFTSOverview = () => {
 	const nfts = [
 		{
-			img: radical,
+			img: purple,
 			title: 'Hi, beauty.',
-			type: 'Divitium Solidum',
+			type: 'NFT Purple',
 			rarity: 'Radical',
-			supply: '500 pcs',
+			supply: '500 ETH',
 			roi: '2x',
 			left: false,
 			description:
-				'This DC01 NFT offers a 200% return on investment.When the physical product that bears the same serial number as this piece is sold, the holder will receive 2 times the original minting price they paid on Private or Public Sale.',
+				"Creadore is developing its own Metaverse and you will have access to it!! More info on this, features, released alongside Creadore's Roadmap. Metaverse itself will have its own Roadmap full of development and features.",
 		},
 		{
-			img: epic,
+			img: orange,
 			title: 'Let it flow.',
-			type: 'Divitium Liquidum',
+			type: 'NFT Orange',
 			rarity: 'Epic',
-			supply: '50 pcs',
+			supply: '50 ETH',
 			roi: '5x',
 			left: true,
 			description:
-				'This DC01 NFT offers a 500% return on investment. When the physical product that bears the same serial number as this piece is sold, the holder will receive 5 times the original minting price they paid on Private or Public Sale..',
+			"Creadore is developing its own Metaverse and you will have access to it!! More info on this, features, released alongside Creadore's Roadmap. Metaverse itself will have its own Roadmap full of development and features.",
 		},
 		{
-			img: legendary,
+			img: yellow,
 			title: 'Oh my gold!',
-			type: ' Divitium Aurum',
+			type: ' NFT Yellow',
 			rarity: 'Legendary',
-			supply: '191 pcs',
+			supply: '191 ETH',
 			roi: '8x',
 			left: true,
 			description:
-				'This DC01 NFT offers a 800% return on investment. When the physical product that bears the same serial number as this piece is sold, the holder will receive 8 times the original minting price they paid on Private or Public Sale.',
+			"Creadore is developing its own Metaverse and you will have access to it!! More info on this, features, released alongside Creadore's Roadmap. Metaverse itself will have its own Roadmap full of development and features.",
 		},
 		{
-			img: supreme,
+			img: blue,
 			title: 'Light it up.',
-			type: ' Divitium Flamium',
+			type: ' NFT Blue',
 			rarity: 'Supreme',
-			supply: '20 pcs',
+			supply: '20 ETH',
 			roi: '10x',
 			left: false,
 			description:
-				'This DC01 NFT offers a 1000% return on investment. When the physical product that bears the same serial number as this piece is sold, the holder will receive 10 times the original minting price they paid on Private or Public Sale',
+			"Creadore is developing its own Metaverse and you will have access to it!! More info on this, features, released alongside Creadore's Roadmap. Metaverse itself will have its own Roadmap full of development and features.",
 		},
 	];
 
 	return (
-		<Container className='section'>
+		<Container className='section' id='nfts'>
 			<div className='titles'>
-				<TitleSection content='Real Product' />
-				<TitleSection content='Real Impact' />
+				<TitleSection content='Super rude' />
+				<TitleSection content='Golems' />
 			</div>
 			{nfts.map(
 				({ img, title, type, rarity, supply, roi, description, left }) => (

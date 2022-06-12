@@ -1,50 +1,49 @@
-import epic from './assets/epic.png';
-import radical from './assets/radical.png';
-import legendary from './assets/legendary.png';
-import supreme from './assets/supreme.jpg';
+import orange from './assets/orange-min.jpg';
+import purple from './assets/purple-min.jpg';
+import yellow from './assets/yellow-min.jpg';
+import blue from './assets/blue-min.jpg';
 import { NFTRoi } from './components/NFTRoi';
 import { TitleSection } from '../../../shared/GlobalStyles';
 
+const nfts = [
+	{
+		img: purple,
+		name: 'NFT Purple',
+		rarity: 'Radical',
+		supply: '500 ETH',
+		supplyPercentage: 100, // This is for css
+		roi: '2x',
+		roiPercentage: 20, // This value has to be higher than 10
+	},
+	{
+		img: orange,
+		name: 'NFT Orange',
+		rarity: 'Supreme',
+		supply: '50 ETH',
+		supplyPercentage: 80,
+		roi: '5x',
+		roiPercentage: 50,
+	},
+	{
+		img: yellow,
+		name: 'NFT Yellow',
+		rarity: 'VIP',
+		supply: '191 ETH',
+		supplyPercentage: 30,
+		roi: '8x',
+		roiPercentage: 80,
+	},
+	{
+		img: blue,
+		name: 'NFT Blue',
+		rarity: 'Elite',
+		supply: '20 ETH',
+		supplyPercentage: 20,
+		roi: '5x',
+		roiPercentage: 100,
+	},
+];
 export const NFTSRoi = () => {
-	const nfts = [
-		{
-			img: radical,
-			name: 'Divitium Solidum',
-			rarity: 'Radical',
-			supply: '500 pcs',
-			supplyPercentage: 100, // This is for css
-			roi: '2x',
-			roiPercentage: 20, // This value has to be higher than 10
-		},
-		{
-			img: epic,
-			name: 'Divitium Liquidum',
-			rarity: 'Epic',
-			supply: '50 pcs',
-			supplyPercentage: 80,
-			roi: '5x',
-			roiPercentage: 50,
-		},
-		{
-			img: legendary,
-			name: 'Divitium Aurum',
-			rarity: 'Epic',
-			supply: '191 pcs',
-			supplyPercentage: 30,
-			roi: '8x',
-			roiPercentage: 80,
-		},
-		{
-			img: supreme,
-			name: 'Divitium Flamium',
-			rarity: 'Epic',
-			supply: '20 pcs',
-			supplyPercentage: 20,
-			roi: '5x',
-			roiPercentage: 100,
-		},
-	];
-
 	return (
 		<section className='section'>
 			<div style={{ textAlign: 'center', marginBottom: '2rem' }}>

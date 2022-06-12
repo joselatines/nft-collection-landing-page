@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 import { variables } from '../../../../../shared/GlobalStyles';
 import { Stage } from './Stage';
-import img from '../../assets/roadmap.png';
 import { Button } from '../../../../../shared/Button';
 
 export const RoadmapComponent = () => {
@@ -18,7 +17,7 @@ export const RoadmapComponent = () => {
 				'Launch Community set up',
 				'Minting Events',
 			],
-			link: 'dsdsdsds.com',
+			link: '#',
 		},
 		{
 			stage: 'Stage 2 (Current)',
@@ -30,7 +29,7 @@ export const RoadmapComponent = () => {
 				'Launch Community set up',
 				'Minting Events',
 			],
-			link: 'dsdsdsds.com',
+			link: '#',
 		},
 		{
 			stage: 'Stage 4 (Current)',
@@ -39,10 +38,10 @@ export const RoadmapComponent = () => {
 				'State-Of-The-Art Legal Structure',
 				'Brand Development',
 				'Web Site',
-				'Launchghfh Community set up',
+				'Community set up',
 				'Minting Events',
 			],
-			link: 'dsdsdsds.com',
+			link: '#',
 		},
 		{
 			stage: 'Stage 5 (Current)',
@@ -51,10 +50,10 @@ export const RoadmapComponent = () => {
 				'State-Of-The-Art Legal Structure',
 				'Brand Development',
 				'Web Site',
-				'Launch gfhfghCommunity set up',
+				'Launch Community set up',
 				'Minting Events',
 			],
-			link: 'dsdsdsds.com',
+			link: '#',
 		},
 	];
 
@@ -79,18 +78,14 @@ export const RoadmapComponent = () => {
 					<Stage stage={stage} title={title} items={items} link={link} />
 				</motion.div>
 			))}
-			<a href='http://' target='_blank' rel='noopener noreferrer'></a>
-			<Button
-				content='Join us our Discord >'
-				link={'https://github.com/joselatines'}
-			/>
+			<Button content='Join us our Discord' />
 		</Container>
 	);
 };
 
 const Container = styled.div`
 	background-color: ${variables.colors.bg_default};
-	background-image: url(${img});
+
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;

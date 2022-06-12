@@ -16,18 +16,9 @@ export const Navigation = () => {
 
 	const links = [
 		{ name: 'Overview', link: '#overview' },
+		{ name: 'NFTS', link: '/overview#nfts' },
 		{ name: 'Roadmap', link: '/overview#roadmap' },
 		{ name: 'Team', link: '/overview#team' },
-		{ name: 'Whitelist', link: '/whitelist' },
-		{ name: 'Login', link: '/login' },
-		{
-			name: 'Whitepaper',
-			externalLink: 'https://fonts.google.com/specimen/Roboto',
-		},
-		{
-			name: 'Opensea',
-			externalLink: 'https://fonts.google.com/specimen/Roboto',
-		},
 	];
 
 	useEffect(() => {
@@ -63,29 +54,17 @@ export const Navigation = () => {
 			</Hamburger>
 			<Logo className='Logo'>
 				<StyledLink to='/'>
-					<img src={logo} alt='divitium-logo' />
+					<img src={logo} alt='NFT-logo' />
 				</StyledLink>
 			</Logo>
 			<Ul className='Ul'>
 				{links.map(({ name, link, externalLink }) => (
 					<Li key={name}>
-						{externalLink ? (
-							<a href={externalLink} target='_blank'>
-								{name}
-							</a>
-						) : (
-							<HashLink smooth to={link}>
-								{name}
-							</HashLink>
-						)}
+						<HashLink smooth to={link || externalLink}>
+							{name}
+						</HashLink>
 					</Li>
 				))}
-
-				<Li>
-					<StyledLink to='https://fonts.google.com/specimen/Roboto'>
-						<Mint>Soon</Mint>
-					</StyledLink>
-				</Li>
 			</Ul>
 		</Container>
 	);
@@ -175,5 +154,3 @@ const Bar = styled.span`
 			}
 		`}
 `;
-
-const Mint = styled.div``;

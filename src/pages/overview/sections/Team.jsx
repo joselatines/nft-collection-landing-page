@@ -15,31 +15,31 @@ export const Team = () => {
 			img: team1,
 		},
 		{
-			name: 'Founder, CEO and desdsdsdsigner',
+			name: 'Founder, CEO and developer',
 			content:
 				'Founder, CEO and designer of physical products, NFTs, website, etc. Former Apple employee, winner of the "2018 Apple Innovation of the Year" award. Enthusiastic about blockchain, good design, and continuous improvement of the human experience',
 			img: team1,
 		},
 		{
-			name: 'Founder, CEO and dsdsdesigner',
+			name: 'Founder, CEO and developer',
 			content:
 				'Founder, CEO and designer of physical products, NFTs, website, etc. Former Apple employee, winner of the "2018 Apple Innovation of the Year" award. Enthusiastic about blockchain, good design, and continuous improvement of the human experience',
 			img: team1,
 		},
 		{
-			name: 'Founder, CEO sdsds designer',
+			name: 'Founder, CEO and designer',
 			content:
 				'Founder, CEO and designer of physical products, NFTs, website, etc. Former Apple employee, winner of the "2018 Apple Innovation of the Year" award. Enthusiastic about blockchain, good design, and continuous improvement of the human experience',
 			img: team1,
 		},
 		{
-			name: 'Founder, CEO sssand designer',
+			name: 'Founder, CEO and designer',
 			content:
 				'Founder, CEO and designer of physical products, NFTs, website, etc. Former Apple employee, winner of the "2018 Apple Innovation of the Year" award. Enthusiastic about blockchain, good design, and continuous improvement of the human experience',
 			img: team1,
 		},
 		{
-			name: 'Founder, aaaaa and designer',
+			name: 'Founder, CEO and designer',
 			content:
 				'Founder, CEO and designer of physical products, NFTs, website, etc. Former Apple employee, winner of the "2018 Apple Innovation of the Year" award. Enthusiastic about blockchain, good design, and continuous improvement of the human experience',
 			img: team1,

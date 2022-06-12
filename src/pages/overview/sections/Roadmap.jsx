@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { variables, TitleSection } from '../../../shared/GlobalStyles';
 import { RoadmapComponent } from './components/roadmap/RoadmapComponent';
 
-import img from './assets/roadmap.png';
-
 export const Roadmap = () => {
 	return (
 		<Container id='roadmap' className='section'>
@@ -23,7 +21,7 @@ export const Roadmap = () => {
 					viewport={{ once: true }}
 					className='subtitle'
 				>
-					Divitium way
+					NFT way
 				</motion.span>
 			</div>
 			<RoadmapComponent />
@@ -32,7 +30,6 @@ export const Roadmap = () => {
 };
 
 const Container = styled.section`
-
 	.titles {
 		display: flex;
 		flex-direction: column;

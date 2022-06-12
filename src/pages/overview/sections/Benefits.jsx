@@ -13,7 +13,7 @@ export const Benefits = () => {
 				'Very limited pieces',
 				'High ROI based on the type and rarity',
 				'Lowest risk due to its connection with an disruption in the physical world',
-				' State-of-the-art innovation in both, digital and physical world.',
+				'State-of-the-art innovation in both, digital and physical world.',
 			],
 		},
 		{
@@ -23,12 +23,12 @@ export const Benefits = () => {
 				'Very limited pieces',
 				'High ROI based on the type and rarity',
 				'Lowest risk due to its connection with an disruption in the physical world',
-				' State-of-the-art innovation in both, digital and physical world.',
+				'State-of-the-art innovation in both, digital and physical world.',
 			],
 		},
 		{
 			title:
-				"Meet our astonishing scale of benefits, we'll beginning with Level 1",
+				"Meet our astonishing scale of benefits, we'll beginning with Level 3",
 			lis: [
 				'Highest quality NFT art',
 				'Very limited pieces',
@@ -38,7 +38,7 @@ export const Benefits = () => {
 			],
 		},
 		{
-			title: 'Level 3',
+			title: 'Level 4',
 			lis: [
 				'Highest quality NFT art',
 				'Very limited pieces',

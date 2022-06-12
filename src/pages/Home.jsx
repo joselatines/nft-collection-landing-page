@@ -7,7 +7,7 @@ export const HomePage = () => {
 		<Container>
 			<StyledLink to='/overview'>
 				<SpinnerBlock className='spinner-block'>
-					<SpinnerTitle>DC01</SpinnerTitle>
+					<SpinnerTitle>NFT</SpinnerTitle>
 					<Spinner className='spinner spinner-3'></Spinner>
 				</SpinnerBlock>
 			</StyledLink>

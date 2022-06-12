@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import { variables } from '../shared/GlobalStyles';
-
 export const Slider = () => {
 	const [position, setPosition] = useState(0);
 	const toLeft = () => {
@@ -11,8 +9,7 @@ export const Slider = () => {
 			setPosition(position - 1);
 		}
 	};
-	const toRight = () => (position < obj.length - 1) && setPosition(position + 1)
-
+	const toRight = () => position < obj.length - 1 && setPosition(position + 1);
 
 	const obj = [
 		{
@@ -44,7 +41,7 @@ export const Slider = () => {
 						key={i}
 						className='slide'
 					>
-						<img src={img} alt='DC01 nft Divitium' />
+						<img src={img} alt='NFT nft NFT' />
 					</motion.div>
 				))}
 			</div>

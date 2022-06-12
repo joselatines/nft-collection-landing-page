@@ -2,16 +2,12 @@ import styled from 'styled-components';
 import logo from './assets/img/logo-white.png';
 import { variables } from './GlobalStyles';
 
-
 export const Footer = () => {
 	return (
 		<Container>
-			<img
-				src={logo}
-				alt='divitium-white'
-			/>
+			<img src={logo} alt='NFT-white' />
 			<Copyright>
-				<Title>Copyright © 2022 Divitium </Title>
+				<Title>Copyright © 2022 NFT </Title>
 				<Additional>Terms & Conditions</Additional>
 				<Additional>Discord</Additional>
 			</Copyright>

@@ -6,7 +6,7 @@ import { TitleSection } from '../../../shared/GlobalStyles';
 
 export const OverviewDescription = () => {
 	// This code can be refactor with a main container to not overwrite "initial='hidden, 	whileInView='show''" but the staggerChildren is not working properly
-	
+
 	const fromRightVar = {
 		hidden: { x: -200, opacity: 0 },
 		show: {
@@ -46,7 +46,7 @@ export const OverviewDescription = () => {
 					initial='hidden'
 					whileInView='show'
 				>
-					<Title>World’s first NFT Collection with a Multi-Value Model.</Title>
+					<Title>A DIFFERENT TAKE ON A “PLAY TO EARN GAME”</Title>
 					<Content>
 						A Up to 11 different benefits spread over 3 values levels{' '}
 						<a
@@ -67,10 +67,10 @@ export const OverviewDescription = () => {
 					whileInView='show'
 				>
 					<Title>
-						<B>DC01</B> <br />
+						<B>NFT</B> <br />
 						<B style={{ fontWeight: variables.font.regular }}>NFT Collection</B>
 					</Title>
-					<Content>DC01 stands for Divitium Chair 01</Content>
+					<Content>NFT stands for NFT Chair 01</Content>
 				</Element>
 				<Element
 					className='c'
@@ -104,7 +104,7 @@ export const OverviewDescription = () => {
 					style={{ textAlign: 'center' }}
 				>
 					<Title>
-						<B>1111</B> <br />
+						<B>838</B> <br />
 						<B style={{ fontWeight: variables.font.regular }}>Unique NFTs</B>
 					</Title>
 				</Element>
@@ -156,11 +156,11 @@ export const OverviewDescription = () => {
 					whileInView='show'
 				>
 					<div>
-						<B>111</B>
+						<B>838</B>
 						<Title>Backup Whitelist spots</Title>
 					</div>
 					<Content>
-						If the 333s get sold out in the whitelist, these 111s will have 2
+						If the 333s get sold out in the whitelist, these 838s will have 2
 						hours early access to mint {''}
 						<a
 							className='link'

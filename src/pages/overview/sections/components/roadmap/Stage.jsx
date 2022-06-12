@@ -7,7 +7,7 @@ export const Stage = ({ stage, title, items, link }) => {
 		<Container>
 			<LogoContainer>
 				<Logo>
-					<img src={logo} alt='divitium logo' />
+					<img src={logo} alt='NFT logo' />
 				</Logo>
 			</LogoContainer>
 			<Content>
@@ -55,7 +55,7 @@ const Logo = styled.div`
 const Container = styled.div`
 	display: flex;
 	gap: 5rem;
-/* 	width: 50%; //center to the middle
+	/* 	width: 50%; //center to the middle
 	transform: translateX(85%); */
 
 	@media only screen and (max-width: ${variables.mediaQueries.mobile_xl}) {
